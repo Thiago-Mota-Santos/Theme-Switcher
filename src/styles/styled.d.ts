@@ -1,6 +1,5 @@
 import 'styled-components';
 
-
 declare module 'styled-components' {
     export interface DefaultTheme {
         title: string;
@@ -11,6 +10,6 @@ declare module 'styled-components' {
     
          background: string;
          text: string;
-       },
+       }
     }
 }
