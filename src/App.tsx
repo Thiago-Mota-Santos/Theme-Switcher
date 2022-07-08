@@ -1,16 +1,15 @@
 import Header from "./components/Header";
 import GlobalStyles from "./styles/global";
-import { ThemeProvider } from "styled-components";
+import { DefaultTheme, ThemeProvider } from "styled-components";
 import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
 import useStatePersisted from "./utils/useStatePersisted";
 
 function App() {
-  const [theme, setTheme] = useStatePersisted("theme", light);
+  const [theme, setTheme] = useStatePersisted<DefaultTheme>("theme", light);
 
   const toggleTheme = () => {
-    setTheme(theme.title === "light" ? dark : light);
-    console.log("toggled");
+    setTheme(theme.title == "light" ? dark : light);
   };
 
   return (

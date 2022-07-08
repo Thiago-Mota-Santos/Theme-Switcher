@@ -16,7 +16,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       Text
       <Switch
         onChange={toggleTheme}
-        checked={title === "dark"}
+        checked={title == "dark"}
         checkedIcon={false}
         uncheckedIcon={false}
         offColor={colors.primary}
